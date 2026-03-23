@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>User Panel</h2>
+
+<button onclick="logout()">Logout</button>
+
+<a href="vote.html"><button>Vote Now</button></a>
+
+<script>
+    function logout() {
+        localStorage.removeItem("role");
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>
