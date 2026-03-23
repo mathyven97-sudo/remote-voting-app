@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Create Poll</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- 🔒 Admin Access Check -->
+    <script>
+        if (localStorage.getItem("role") !== "admin") {
+            alert("Access Denied");
+            window.location.href = "login.html";
+        }
+    </script>
+
+</head>
+
+<body>
+
+<h2>Create Poll</h2>
+
+<!-- Question -->
+<label for="question">Poll Question</label><br>
+<input type="text" id="question" placeholder="Enter Question"><br><br>
+
+<!-- Option 1 -->
+<label for="option1">Option 1</label><br>
+<input type="text" id="option1" placeholder="Option 1"><br><br>
+
+<!-- Option 2 -->
+<label for="option2">Option 2</label><br>
+<input type="text" id="option2" placeholder="Option 2"><br><br>
+
+<!-- Button -->
+<button onclick="createPoll()">Create Poll</button>
+
+<!-- Script -->
+<script src="script.js"></script>
+
+</body>
+</html>
